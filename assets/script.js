@@ -19,7 +19,7 @@ function userLocation() {
             lon = position.coords.longitude;
             console.log("current position: ", lat, lon);
             searchStorage();
-            var queryURL = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat +
+            var queryURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat +
                 "&lon=" + lon + "&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb"
 
             $.ajax({
@@ -78,7 +78,7 @@ function userLocation() {
                     $(".container").attr("style", "background: #071725;")
                 }
 
-                var queryURL = "http://api.openweathermap.org/data/2.5/uvi?appid=e2764fa35ac1bea55468905c58d7b4cb&lat=" + response.coord.lat + "&lon=" + response.coord.lon;
+                var queryURL = "https://api.openweathermap.org/data/2.5/uvi?appid=e2764fa35ac1bea55468905c58d7b4cb&lat=" + response.coord.lat + "&lon=" + response.coord.lon;
                 $.ajax({
                     url: queryURL,
                     method: "GET"
@@ -94,7 +94,7 @@ function userLocation() {
 
                     console.log(day)
 
-                    currentForcast.html("<span><h1>Today's Forcast</h1></span><span><img style='dispaly: inline' src='http://openweathermap.org/img/wn/" + icon + "@2x.png'><h2>"
+                    currentForcast.html("<span><h1>Today's Forcast</h1></span><span><img style='dispaly: inline' src='https://openweathermap.org/img/wn/" + icon + "@2x.png'><h2>"
                         + city + " " + dateFormat +
                         "</h2></span><span><h3>Temperature: " + temp +
                         "&deg;</h3></span><span><h3>Humidity: " + humid +
@@ -102,7 +102,7 @@ function userLocation() {
                         " mph</h3></span><span><h3>UV Index: <span style='background: red; border-radius: 10px; padding: 0 5px 0 5px;'>" + uvIndex +
                         "</span></h3></span>");
 
-                    var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "," + country + "&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb&lat"
+                    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "," + country + "&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb&lat"
 
                     $.ajax({
                         url: queryURL,
@@ -127,7 +127,7 @@ function userLocation() {
                                     day: "<span><h4>" + dateFormat + "</h4></span>",
                                     temp: "<span><h5>Temp: " + response.list[i].main.temp.toFixed(0) + "&deg;</h5></span>",
                                     humidity: "<span><h5>Humidity: " + response.list[i].main.humidity + "%</h5></span>",
-                                    icon: "<span><img src='http://openweathermap.org/img/wn/" + response.list[i].weather[0].icon + "@2x.png'></span>"
+                                    icon: "<span><img src='https://openweathermap.org/img/wn/" + response.list[i].weather[0].icon + "@2x.png'></span>"
                                 }
 
                                 var newCol = $("<div class='three columns'>");
@@ -142,7 +142,7 @@ function userLocation() {
         })
     }
     else {
-        var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=Paris,France&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb"
+        var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=Paris,France&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb"
 
         $.ajax({
             url: queryURL,
@@ -218,7 +218,7 @@ function userLocation() {
                 $(".container").attr("style", "background: #071725;")
             }
 
-            var queryURL = "http://api.openweathermap.org/data/2.5/uvi?appid=e2764fa35ac1bea55468905c58d7b4cb&lat=" + response.coord.lat + "&lon=" + response.coord.lon;
+            var queryURL = "https://api.openweathermap.org/data/2.5/uvi?appid=e2764fa35ac1bea55468905c58d7b4cb&lat=" + response.coord.lat + "&lon=" + response.coord.lon;
             $.ajax({
                 url: queryURL,
                 method: "GET"
@@ -234,7 +234,7 @@ function userLocation() {
 
                 console.log(day)
 
-                currentForcast.html("<span><h1>Today's Forcast</h1></span><span><img src='http://openweathermap.org/img/wn/" + icon + "@2x.png'><h2>"
+                currentForcast.html("<span><h1>Today's Forcast</h1></span><span><img src='https://openweathermap.org/img/wn/" + icon + "@2x.png'><h2>"
                     + city + " " + dateFormat +
                     "</h2></span><span><h3>Temperature: " + temp +
                     "&deg;</h3></span><span><h3>Humidity: " + humid +
@@ -242,7 +242,7 @@ function userLocation() {
                     " mph</h3></span><span><h3>UV Index: <span style='background: red; border-radius: 10px; padding: 0 5px 0 5px;'>" + uvIndex +
                     "</span></h3></span>");
 
-                var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "," + country + "&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb&lat"
+                var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "," + country + "&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb&lat"
 
                 $.ajax({
                     url: queryURL,
@@ -265,7 +265,7 @@ function userLocation() {
                                 day: "<span><h4>" + dateFormat + "</h4></span>",
                                 temp: "<span><h5>Temp: " + response.list[i].main.temp.toFixed(0) + "&deg;</h5></span>",
                                 humidity: "<span><h5>Humidity: " + response.list[i].main.humidity + "%</h5></span>",
-                                icon: "<span><img src='http://openweathermap.org/img/wn/" + response.list[i].weather[0].icon + "@2x.png'></span>"
+                                icon: "<span><img src='https://openweathermap.org/img/wn/" + response.list[i].weather[0].icon + "@2x.png'></span>"
                             }
 
                             var newCol = $("<div class='three columns'>");
@@ -295,7 +295,7 @@ function getResponse(event) {
         return;
     }
     else {
-        var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + userSearch + "&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb";
+        var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + userSearch + "&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb";
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -370,7 +370,7 @@ function getResponse(event) {
                 $(".container").attr("style", "background: #071725;")
             }
 
-            var queryURL = "http://api.openweathermap.org/data/2.5/uvi?appid=e2764fa35ac1bea55468905c58d7b4cb&lat=" + response.coord.lat + "&lon=" + response.coord.lon;
+            var queryURL = "https://api.openweathermap.org/data/2.5/uvi?appid=e2764fa35ac1bea55468905c58d7b4cb&lat=" + response.coord.lat + "&lon=" + response.coord.lon;
             $.ajax({
                 url: queryURL,
                 method: "GET"
@@ -386,7 +386,7 @@ function getResponse(event) {
 
                 console.log(day)
 
-                currentForcast.html("<span><h1>Today's Forcast</h1></span><span><img src='http://openweathermap.org/img/wn/" + icon + "@2x.png'><h2>"
+                currentForcast.html("<span><h1>Today's Forcast</h1></span><span><img src='https://openweathermap.org/img/wn/" + icon + "@2x.png'><h2>"
                     + city + " " + dateFormat +
                     "</h2></span><span><h3>Temperature: " + temp +
                     "&deg;</h3></span><span><h3>Humidity: " + humid +
@@ -394,7 +394,7 @@ function getResponse(event) {
                     " mph</h3></span><span><h3>UV Index: <span style='background: red; border-radius: 10px; padding: 0 5px 0 5px;'>" + uvIndex +
                     "</span></h3></span>");
 
-                var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "," + country + "&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb&lat"
+                var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "," + country + "&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb&lat"
 
                 $.ajax({
                     url: queryURL,
@@ -417,7 +417,7 @@ function getResponse(event) {
                                 day: "<span><h4>" + dateFormat + "</h4></span>",
                                 temp: "<span><h5>Temp: " + response.list[i].main.temp.toFixed(0) + "&deg;</h5></span>",
                                 humidity: "<span><h5>Humidity: " + response.list[i].main.humidity + "%</h5></span>",
-                                icon: "<span><img src='http://openweathermap.org/img/wn/" + response.list[i].weather[0].icon + "@2x.png'></span>"
+                                icon: "<span><img src='https://openweathermap.org/img/wn/" + response.list[i].weather[0].icon + "@2x.png'></span>"
                             }
 
                             var newCol = $("<div class='three columns'>");
@@ -446,7 +446,7 @@ function getBtnResponse(event) {
     var userSearch = $(this).attr("data-city");
     console.log("data-city?", userSearch)
 
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + userSearch + "&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb"
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + userSearch + "&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb"
     // Create an AJAX call to retrieve data Log the data in console
     $.ajax({
         url: queryURL,
@@ -522,7 +522,7 @@ function getBtnResponse(event) {
             $(".container").attr("style", "background: #071725;")
         }
 
-        var queryURL = "http://api.openweathermap.org/data/2.5/uvi?appid=e2764fa35ac1bea55468905c58d7b4cb&lat=" + response.coord.lat + "&lon=" + response.coord.lon;
+        var queryURL = "https://api.openweathermap.org/data/2.5/uvi?appid=e2764fa35ac1bea55468905c58d7b4cb&lat=" + response.coord.lat + "&lon=" + response.coord.lon;
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -538,7 +538,7 @@ function getBtnResponse(event) {
 
             console.log(day)
 
-            currentForcast.html("<span><h1>Today's Forcast</h1></span><span><img src='http://openweathermap.org/img/wn/" + icon + "@2x.png'><h2>"
+            currentForcast.html("<span><h1>Today's Forcast</h1></span><span><img src='https://openweathermap.org/img/wn/" + icon + "@2x.png'><h2>"
                 + city + " " + dateFormat +
                 "</h2></span><span><h3>Temperature: " + temp +
                 "&deg;</h3></span><span><h3>Humidity: " + humid +
@@ -546,7 +546,7 @@ function getBtnResponse(event) {
                 " mph</h3></span><span><h3>UV Index: <span style='background: red; border-radius: 10px; padding: 0 5px 0 5px;'>" + uvIndex +
                 "</span></h3></span>");
 
-            var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "," + country + "&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb&lat"
+            var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "," + country + "&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb&lat"
 
             $.ajax({
                 url: queryURL,
@@ -569,7 +569,7 @@ function getBtnResponse(event) {
                             day: "<span><h4>" + dateFormat + "</h4></span>",
                             temp: "<span><h5>Temp: " + response.list[i].main.temp.toFixed(0) + "&deg;</h5></span>",
                             humidity: "<span><h5>Humidity: " + response.list[i].main.humidity + "%</h5></span>",
-                            icon: "<span><img src='http://openweathermap.org/img/wn/" + response.list[i].weather[0].icon + "@2x.png'></span>"
+                            icon: "<span><img src='https://openweathermap.org/img/wn/" + response.list[i].weather[0].icon + "@2x.png'></span>"
                         }
 
                         var newCol = $("<div class='three columns'>");
