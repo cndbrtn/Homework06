@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WTW - What's the Weather?</title>
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display|Solway|Sulphur+Point&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/normalize.css">
+    <link rel="stylesheet" href="assets/skeleton.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>What's the Weather???</h1>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="six columns" id="today">
+                <span>
+                    <h1>Today's Forcast</h1>
+                </span>
+            </div>
+            <div class="six columns align-center" id="btn-holder">
+                <span>
+                    <h1>Past Searches</h1>
+                </span>
+            </div>
+        </div>
+        <div class="row align-center">
+            <span>
+                <h3 style="color: #6e6e6e;">Five Day Forcast</h3>
+            </span>
+        </div>
+        <div id="five-day" class="row align-center">
+        </div>
+
+        <div class="row">
+            <div class="twelve columns align-center">
+                <span>
+                    <h1>Search for a city</h1>
+                </span><input type="text" id="user-search" placeholder="City,State or City,Country">
+                <button id="search-btn" value="submit">Search</button>
+            </div>
+        </div>
+
+
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
