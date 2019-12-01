@@ -593,8 +593,9 @@ function getBtnResponse(event) {
 function searchStorage() {
     var storageSlot = [localStorage.getItem("0"), localStorage.getItem("1"), localStorage.getItem("2"), localStorage.getItem("3"), localStorage.getItem("4"), localStorage.getItem("5"), localStorage.getItem("6")]
 
-    console.log("storage slot array ", storageSlot[1])
-    if (storageSlot === null) {
+    console.log("storage slot array ", storageSlot)
+    if (storageSlot[0] === null) {
+        console.log("storageSlot = null ", storageSlot)
         return;
     }
     else {
