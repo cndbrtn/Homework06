@@ -22,25 +22,26 @@ h2 {
 
 h4 {
     font-family: 'Sulphur Point', sans-serif;
-    font-size: medium;
+    font-size: large;
 }
 
 h5 {
-    font-size: small;
+    font-size: medium;
 }
 
+h1,
 h2, 
 h3,
 h4,
 h5,
 h6 {
-    color: #fff;
+    color: #818181;
     margin: 0px;
 }
 
 header {
     text-align: center;
-    color: #ccc;
+    /* color: #ccc; */
     margin-top: 2%;
 }
 
