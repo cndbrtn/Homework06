@@ -143,7 +143,7 @@ function userLocation() {
     }
     else {
         var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=Paris,France&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb"
-        // Create an AJAX call to retrieve data Log the data in console
+
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -295,8 +295,7 @@ function getResponse(event) {
         return;
     }
     else {
-        var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + userSearch + "&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb"
-        // Create an AJAX call to retrieve data Log the data in console
+        var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + userSearch + "&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb";
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -595,7 +594,7 @@ function searchStorage() {
     var storageSlot = [localStorage.getItem("0"), localStorage.getItem("1"), localStorage.getItem("2"), localStorage.getItem("3"), localStorage.getItem("4"), localStorage.getItem("5"), localStorage.getItem("6")]
 
     console.log("storage slot array ", storageSlot[1])
-    if (storageSlot.zero === null) {
+    if (storageSlot === null) {
         return;
     }
     else {
