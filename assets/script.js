@@ -114,8 +114,7 @@ function userLocation() {
                     }).then(function (response) {
                         console.log("five day forcast response: ", response);
                         // fiveDay.html("<div class='twelve columns'><span><h1>5-Day Forcast</h1></span>");
-                        // $("<div id='five-forcast' class='row'>").insertAfter("#five-day");
-                        fiveDay.html("<div class='two-thirds column'>");
+                        // $("<div id='five-forcast' class='row'>").insertAfter("#five-day");)
                         for (var i = 0; i < 31; i++) {
                             if ([1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27, 28, 29].indexOf(i) === -1) {
 
@@ -142,6 +141,7 @@ function userLocation() {
                                 newCol.html(fiveDayForcast.icon + fiveDayForcast.day + fiveDayForcast.temp + fiveDayForcast.humidity)
                             }
                         }
+                        document.querySelector(".two").className = "two columns offset-by-one";
                     })
                 })
             })
@@ -255,8 +255,7 @@ function userLocation() {
                     url: queryURL,
                     method: "GET"
                 }).then(function (response) {
-                    console.log("five day forcast response: ", response);
-                    fiveDay.html("<div class='two-thirds column'>");
+                    console.log("five day forcast response: ", response)
                     for (var i = 0; i < 31; i++) {
                         if ([1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27, 28, 29].indexOf(i) === -1) {
 
@@ -277,12 +276,13 @@ function userLocation() {
                                 icon: "<span><img src='https://openweathermap.org/img/wn/" + response.list[i].weather[0].icon + "@2x.png'></span>"
                             }
 
-                            var newCol = $("<div class='three columns'>");
+                            var newCol = $("<div class='two columns'>");
 
                             fiveDay.append(newCol);
                             newCol.html(fiveDayForcast.icon + fiveDayForcast.day + fiveDayForcast.temp + fiveDayForcast.humidity)
                         }
                     }
+                    document.querySelector(".two").className = "two columns offset-by-one";
                 })
             })
         })
@@ -410,8 +410,7 @@ function getResponse(event) {
                     url: queryURL,
                     method: "GET"
                 }).then(function (response) {
-                    console.log("five day forcast response: ", response);
-                    fiveDay.html("<div class='two-thirds column'>");
+                    console.log("five day forcast response: ", response)
                     for (var i = 0; i < 31; i++) {
                         if ([1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27, 28, 29].indexOf(i) === -1) {
 
@@ -432,13 +431,13 @@ function getResponse(event) {
                                 icon: "<span><img src='https://openweathermap.org/img/wn/" + response.list[i].weather[0].icon + "@2x.png'></span>"
                             }
 
-                            var newCol = $("<div class='three columns'>");
+                            var newCol = $("<div class='two columns'>");
 
                             fiveDay.append(newCol);
                             newCol.html(fiveDayForcast.icon + fiveDayForcast.day + fiveDayForcast.temp + fiveDayForcast.humidity)
                         }
                     }
-
+                    document.querySelector(".two").className = "two columns offset-by-one";
                     if (searchClick > 7) {
                         searchClick = 0;
                     }
@@ -565,8 +564,7 @@ function getBtnResponse(event) {
                 url: queryURL,
                 method: "GET"
             }).then(function (response) {
-                console.log("five day forcast response: ", response);
-                fiveDay.html("<div class='two-thirds column'>");
+                console.log("five day forcast response: ", response)
                 for (var i = 0; i < 31; i++) {
                     if ([1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27, 28, 29].indexOf(i) === -1) {
 
@@ -587,13 +585,13 @@ function getBtnResponse(event) {
                             icon: "<span><img src='https://openweathermap.org/img/wn/" + response.list[i].weather[0].icon + "@2x.png'></span>"
                         }
 
-                        var newCol = $("<div class='three columns'>");
+                        var newCol = $("<div class='two columns'>");
 
                         fiveDay.append(newCol);
                         newCol.html(fiveDayForcast.icon + fiveDayForcast.day + fiveDayForcast.temp + fiveDayForcast.humidity)
                     }
                 }
-
+                document.querySelector(".two").className = "two columns offset-by-one";
                 if (searchClick > 6) {
                     searchClick = 0;
                 }
