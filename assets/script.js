@@ -166,8 +166,8 @@ function userLocation() {
 
             userSearches.push(userSearch.split(',')[0])
             console.log("user searches array ", userSearches)
-            currentForcast.html("<span><h1>Today's Forcast</h1></span")
-            btnHolder.html("<span><h1>Past Searches</h1></span")
+            currentForcast.html("<span><h1>Today's Forcast</h1></span>")
+            btnHolder.html("<span><h1>Past Searches</h1></span>")
 
 
             for (var i = 0; i < userSearches.length; i++) {
@@ -321,8 +321,8 @@ function getResponse(event) {
 
             userSearches.push(userSearch.split(',')[0])
             console.log("user searches array ", userSearches)
-            currentForcast.html("<span><h1>Today's Forcast</h1></span")
-            btnHolder.html("<span><h1>Past Searches</h1></span")
+            currentForcast.html("<span><h1>Today's Forcast</h1></span>")
+            btnHolder.html("<span><h1>Past Searches</h1></span>")
 
 
             for (var i = 0; i < userSearches.length; i++) {
@@ -476,8 +476,8 @@ function getBtnResponse(event) {
 
         // userSearches.push(userSearch.split(',')[0])
         // console.log("user searches array ", userSearches)
-        currentForcast.html("<span><h1>Today's Forcast</h1></span")
-        btnHolder.html("<span><h1>Past Searches</h1></span")
+        currentForcast.html("<span><h1>Today's Forcast</h1></span>")
+        btnHolder.html("<span><h1>Past Searches</h1></span>")
 
         // I'm not sure how to fix the buttons so that they don't do weird overwriting things but I just don't have time right now
         for (var i = 0; i < userSearches.length; i++) {
@@ -617,6 +617,7 @@ function searchStorage() {
             return el != null;
         });
         console.log("filtered", filtered)
+        $("#btn-holder").html("<span><h1>Past Searches</h1></span>")
         for (var i = 0; i < filtered.length; i++) {
             var buttonEl = $("<button data-city='" + storageSlot[i] + "' value='submit'>");
             buttonEl.text(filtered[i].split(',')[0]);
