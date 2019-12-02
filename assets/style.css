@@ -45,6 +45,10 @@ header {
     text-align: center;
 }
 
+.margin-auto {
+    margin: 0 auto;
+}
+
 .container {
     max-width: 800px;
     background: #61aaee;

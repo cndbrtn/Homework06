@@ -115,8 +115,8 @@ function userLocation() {
                         console.log("five day forcast response: ", response);
                         // fiveDay.html("<div class='twelve columns'><span><h1>5-Day Forcast</h1></span>");
                         // $("<div id='five-forcast' class='row'>").insertAfter("#five-day");
-
-                        for (var i = 0; i < 30; i++) {
+                        fiveDay.html("<div class='two-thirds column'>");
+                        for (var i = 0; i < 31; i++) {
                             if ([1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27, 28, 29].indexOf(i) === -1) {
 
                                 var fiveDate = new Date(response.list[i].dt * 1000)
@@ -136,7 +136,7 @@ function userLocation() {
                                     icon: "<span><img src='https://openweathermap.org/img/wn/" + response.list[i].weather[0].icon + "@2x.png'></span>"
                                 }
 
-                                var newCol = $("<div class='three columns'>");
+                                var newCol = $("<div class='two columns'>");
 
                                 fiveDay.append(newCol);
                                 newCol.html(fiveDayForcast.icon + fiveDayForcast.day + fiveDayForcast.temp + fiveDayForcast.humidity)
@@ -256,8 +256,8 @@ function userLocation() {
                     method: "GET"
                 }).then(function (response) {
                     console.log("five day forcast response: ", response);
-
-                    for (var i = 0; i < 30; i++) {
+                    fiveDay.html("<div class='two-thirds column'>");
+                    for (var i = 0; i < 31; i++) {
                         if ([1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27, 28, 29].indexOf(i) === -1) {
 
                             var fiveDate = new Date(response.list[i].dt * 1000)
@@ -411,8 +411,8 @@ function getResponse(event) {
                     method: "GET"
                 }).then(function (response) {
                     console.log("five day forcast response: ", response);
-
-                    for (var i = 0; i < 30; i++) {
+                    fiveDay.html("<div class='two-thirds column'>");
+                    for (var i = 0; i < 31; i++) {
                         if ([1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27, 28, 29].indexOf(i) === -1) {
 
                             var fiveDate = new Date(response.list[i].dt * 1000)
@@ -566,8 +566,8 @@ function getBtnResponse(event) {
                 method: "GET"
             }).then(function (response) {
                 console.log("five day forcast response: ", response);
-
-                for (var i = 0; i < 30; i++) {
+                fiveDay.html("<div class='two-thirds column'>");
+                for (var i = 0; i < 31; i++) {
                     if ([1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27, 28, 29].indexOf(i) === -1) {
 
                         var fiveDate = new Date(response.list[i].dt * 1000)
