@@ -1,4 +1,4 @@
-# Homework Project 6
+# Homework Project 6 (LINK!)[https://cndbrtn.github.io/Homework06 "Homework Project 06"]
 ## Weather Dashboard
 
 ### What it does
