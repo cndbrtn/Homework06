@@ -123,6 +123,7 @@ function userLocation() {
                                 var weekArr = ["Mon", "Teus", "Wed", "Thr", "Fri", "Sat", "Sun"]
                                 var weekday = weekArr[fiveDate.getDay()];
                                 var day = fiveDate.getDate();
+                                day = day + 1;
                                 var month = fiveDate.getMonth();
                                 month = month + 1;
                                 var year = fiveDate.getFullYear();
@@ -263,6 +264,7 @@ function userLocation() {
                             var weekArr = ["Mon", "Teus", "Wed", "Thr", "Fri", "Sat", "Sun"]
                             var weekday = weekArr[fiveDate.getDay()];
                             var day = fiveDate.getDate();
+                            day = day + 1;
                             var month = fiveDate.getMonth();
                             month = month + 1;
                             var year = fiveDate.getFullYear();
@@ -417,6 +419,7 @@ function getResponse(event) {
                             var weekArr = ["Mon", "Teus", "Wed", "Thr", "Fri", "Sat", "Sun"]
                             var weekday = weekArr[fiveDate.getDay()];
                             var day = fiveDate.getDate();
+                            day = day + 1;
                             var month = fiveDate.getMonth();
                             month = month + 1;
                             var year = fiveDate.getFullYear();
@@ -571,6 +574,7 @@ function getBtnResponse(event) {
                         var weekArr = ["Mon", "Teus", "Wed", "Thr", "Fri", "Sat", "Sun"]
                         var weekday = weekArr[fiveDate.getDay()];
                         var day = fiveDate.getDate();
+                        day = day + 1;
                         var month = fiveDate.getMonth();
                         month = month + 1;
                         var year = fiveDate.getFullYear();
