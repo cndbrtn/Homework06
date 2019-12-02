@@ -99,7 +99,7 @@ function userLocation() {
                         "</h2></span><span><h3>Temperature: " + temp +
                         "&deg;</h3></span><span><h3>Humidity: " + humid +
                         "%</h3></span><span><h3>Wind Speed: " + wind +
-                        " mph</h3></span><span><h3>UV Index: <span style='background: red; border-radius: 10px; padding: 0 5px 0 5px;'>" + uvIndex +
+                        " mph</h3></span><span><h3>UV Index: <span style='color: #fff; background: red; border-radius: 10px; padding: 0 5px 0 5px;'>" + uvIndex +
                         "</span></h3></span>");
 
                     var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "," + country + "&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb&lat"
@@ -239,7 +239,7 @@ function userLocation() {
                     "</h2></span><span><h3>Temperature: " + temp +
                     "&deg;</h3></span><span><h3>Humidity: " + humid +
                     "%</h3></span><span><h3>Wind Speed: " + wind +
-                    " mph</h3></span><span><h3>UV Index: <span style='background: red; border-radius: 10px; padding: 0 5px 0 5px;'>" + uvIndex +
+                    " mph</h3></span><span><h3>UV Index: <span style='color: #fff; background: red; border-radius: 10px; padding: 0 5px 0 5px;'>" + uvIndex +
                     "</span></h3></span>");
 
                 var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "," + country + "&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb&lat"
@@ -391,7 +391,7 @@ function getResponse(event) {
                     "</h2></span><span><h3>Temperature: " + temp +
                     "&deg;</h3></span><span><h3>Humidity: " + humid +
                     "%</h3></span><span><h3>Wind Speed: " + wind +
-                    " mph</h3></span><span><h3>UV Index: <span style='background: red; border-radius: 10px; padding: 0 5px 0 5px;'>" + uvIndex +
+                    " mph</h3></span><span><h3>UV Index: <span style='color: #fff; background: red; border-radius: 10px; padding: 0 5px 0 5px;'>" + uvIndex +
                     "</span></h3></span>");
 
                 var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "," + country + "&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb&lat"
@@ -543,7 +543,7 @@ function getBtnResponse(event) {
                 "</h2></span><span><h3>Temperature: " + temp +
                 "&deg;</h3></span><span><h3>Humidity: " + humid +
                 "%</h3></span><span><h3>Wind Speed: " + wind +
-                " mph</h3></span><span><h3>UV Index: <span style='background: red; border-radius: 10px; padding: 0 5px 0 5px;'>" + uvIndex +
+                " mph</h3></span><span><h3>UV Index: <span style='color: #fff; background: red; border-radius: 10px; padding: 0 5px 0 5px;'>" + uvIndex +
                 "</span></h3></span>");
 
             var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "," + country + "&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb&lat"
