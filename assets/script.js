@@ -42,13 +42,13 @@ function userLocation() {
                 var country = response.sys.country;
 
                 console.log("your icon is ", icon)
-                if (icon === "11d" || icon === "10d" || icon === "09d") {
+                if (icon === "11d" || icon === "10d" || icon === "09d" || icon === "11n" || icon === "10n" || icon === "09n") {
                     mode = "rain";
                     $("body").attr("style", "background-image: linear-gradient(#000, #ccc);")
                     $(".container").attr("style", "background: #000;")
                 }
 
-                if (icon === "13d") {
+                if (icon === "13d" || icon === "13n") {
                     mode = "snow";
                     $("body").attr("style", "background-image: linear-gradient(#32414e, #ccc);")
                     $(".container").attr("style", "background: #32414e;")
@@ -66,7 +66,7 @@ function userLocation() {
                     $(".container").attr("style", "background: #071725;")
                 }
 
-                if (icon === "50d") {
+                if (icon === "50d" || icon === "05n") {
                     mode = "atmosphere";
                     $("body").attr("style", "background-image: linear-gradient(#556675, #ccc);")
                     $(".container").attr("style", "background: #556675;")
@@ -188,13 +188,13 @@ function userLocation() {
             var icon = response.weather[0].icon;
             var country = response.sys.country;
 
-            if (icon === "11d" || icon === "10d" || icon === "09d") {
+            if (icon === "11d" || icon === "10d" || icon === "09d" || icon === "11n" || icon === "10n" || icon === "09n") {
                 mode = "rain";
                 $("body").attr("style", "background-image: linear-gradient(#000, #ccc);")
                 $(".container").attr("style", "background: #000;")
             }
 
-            if (icon === "13d") {
+            if (icon === "13d" || icon === "13n") {
                 mode = "snow";
                 $("body").attr("style", "background-image: linear-gradient(#32414e, #ccc);")
                 $(".container").attr("style", "background: #32414e;")
@@ -212,7 +212,7 @@ function userLocation() {
                 $(".container").attr("style", "background: #071725;")
             }
 
-            if (icon === "50d") {
+            if (icon === "50d" || icon === "05n") {
                 mode = "atmosphere";
                 $("body").attr("style", "background-image: linear-gradient(#556675, #ccc);")
                 $(".container").attr("style", "background: #556675;")
@@ -343,13 +343,13 @@ function getResponse(event) {
             var icon = response.weather[0].icon;
             var country = response.sys.country;
 
-            if (icon === "11d" || icon === "10d" || icon === "09d") {
+            if (icon === "11d" || icon === "10d" || icon === "09d" || icon === "11n" || icon === "10n" || icon === "09n") {
                 mode = "rain";
                 $("body").attr("style", "background-image: linear-gradient(#000, #ccc);")
                 $(".container").attr("style", "background: #000;")
             }
 
-            if (icon === "13d") {
+            if (icon === "13d" || icon === "13n") {
                 mode = "snow";
                 $("body").attr("style", "background-image: linear-gradient(#32414e, #ccc);")
                 $(".container").attr("style", "background: #32414e;")
@@ -367,7 +367,7 @@ function getResponse(event) {
                 $(".container").attr("style", "background: #071725;")
             }
 
-            if (icon === "50d") {
+            if (icon === "50d" || icon === "05n") {
                 mode = "atmosphere";
                 $("body").attr("style", "background-image: linear-gradient(#556675, #ccc);")
                 $(".container").attr("style", "background: #556675;")
@@ -497,13 +497,13 @@ function getBtnResponse(event) {
         var icon = response.weather[0].icon;
         var country = response.sys.country;
 
-        if (icon === "11d" || icon === "10d" || icon === "09d") {
+        if (icon === "11d" || icon === "10d" || icon === "09d" || icon === "11n" || icon === "10n" || icon === "09n") {
             mode = "rain";
             $("body").attr("style", "background-image: linear-gradient(#000, #ccc);")
             $(".container").attr("style", "background: #000;")
         }
 
-        if (icon === "13d") {
+        if (icon === "13d" || icon === "13n") {
             mode = "snow";
             $("body").attr("style", "background-image: linear-gradient(#32414e, #ccc);")
             $(".container").attr("style", "background: #32414e;")
@@ -521,7 +521,7 @@ function getBtnResponse(event) {
             $(".container").attr("style", "background: #071725;")
         }
 
-        if (icon === "50d") {
+        if (icon === "50d" || icon === "05n") {
             mode = "atmosphere";
             $("body").attr("style", "background-image: linear-gradient(#556675, #ccc);")
             $(".container").attr("style", "background: #556675;")
