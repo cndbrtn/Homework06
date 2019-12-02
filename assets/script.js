@@ -473,8 +473,8 @@ function getBtnResponse(event) {
         btnHolder.empty();
 
 
-        // userSearches.push(userSearch.split(',')[0])
-        // console.log("user searches array ", userSearches)
+        userSearches.push(userSearch.split(',')[0])
+        console.log("user searches array ", userSearches)
         currentForcast.html("<span><h1>Today's Forcast</h1></span>")
         btnHolder.html("<span><h1>Past Searches</h1></span>")
 
@@ -607,7 +607,7 @@ function searchStorage() {
     var storageSlot = [localStorage.getItem("1"), localStorage.getItem("2"), localStorage.getItem("3"), localStorage.getItem("4"), localStorage.getItem("5"), localStorage.getItem("6"), localStorage.getItem("7")]
 
     console.log("storage slot array ", storageSlot)
-    if (storageSlot[0] === null) {
+    if (storageSlot[0] === null && storageSlot[1] === null && storageSlot[2] === null && storageSlot[3] === null && storageSlot[4] === null && storageSlot[5] === null && storageSlot[6] === null) {
         return;
     }
     else {
