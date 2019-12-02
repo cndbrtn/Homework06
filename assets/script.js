@@ -427,11 +427,11 @@ function getResponse(event) {
                         }
                     }
 
-                    if (searchClick > 6) {
+                    if (searchClick > 7) {
                         searchClick = 0;
                     }
 
-                    var storageSlots = [0, 1, 2, 3, 4, 5, 6];
+                    var storageSlots = [1, 2, 3, 4, 5, 6, 7];
                     localStorage.setItem(storageSlots[searchClick], userSearch);
                 })
             })
@@ -446,8 +446,7 @@ function getBtnResponse(event) {
     var userSearch = $(this).attr("data-city");
     console.log("data-city?", userSearch)
 
-    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + userSearch + "&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb"
-    // Create an AJAX call to retrieve data Log the data in console
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + userSearch + "&units=imperial&appid=e2764fa35ac1bea55468905c58d7b4cb";
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -591,7 +590,7 @@ function getBtnResponse(event) {
 }
 
 function searchStorage() {
-    var storageSlot = [localStorage.getItem("0"), localStorage.getItem("1"), localStorage.getItem("2"), localStorage.getItem("3"), localStorage.getItem("4"), localStorage.getItem("5"), localStorage.getItem("6")]
+    var storageSlot = [localStorage.getItem("1"), localStorage.getItem("2"), localStorage.getItem("3"), localStorage.getItem("4"), localStorage.getItem("5"), localStorage.getItem("6"), localStorage.getItem("7")]
 
     console.log("storage slot array ", storageSlot)
     if (storageSlot[0] === null) {
