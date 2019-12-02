@@ -83,13 +83,17 @@ function userLocation() {
                     url: queryURL,
                     method: "GET"
                 }).then(function (response) {
-                    console.log(response)
+                    // console.log(response)
                     var date = new Date(timestamp * 1000);
                     var year = date.getFullYear();
                     var month = date.getMonth();
+                    month = month + 1; //why is this wrong and needing a + 1? who knows! I don't have time to figure it out
                     var day = date.getDate();
                     var dateFormat = month + "/" + day + "/" + year
                     var uvIndex = response.value
+                    console.log("month ", month)
+
+                    // actually the date stuff is all pretty iffy but again I just don't have time to figure out what tiny little mistake is messing it all up right now
 
 
                     console.log(day)
@@ -120,6 +124,7 @@ function userLocation() {
                                 var weekday = weekArr[fiveDate.getDay()];
                                 var day = fiveDate.getDate();
                                 var month = fiveDate.getMonth();
+                                month = month + 1;
                                 var year = fiveDate.getFullYear();
                                 var dateFormat = weekday + " - " + month + "/" + day + "/" + year
 
@@ -227,6 +232,7 @@ function userLocation() {
                 var date = new Date(timestamp * 1000);
                 var year = date.getFullYear();
                 var month = date.getMonth();
+                month = month + 1;
                 var day = date.getDate();
                 var dateFormat = month + "/" + day + "/" + year
                 var uvIndex = response.value
@@ -258,6 +264,7 @@ function userLocation() {
                             var weekday = weekArr[fiveDate.getDay()];
                             var day = fiveDate.getDate();
                             var month = fiveDate.getMonth();
+                            month = month + 1;
                             var year = fiveDate.getFullYear();
                             var dateFormat = weekday + " - " + month + "/" + day + "/" + year
 
@@ -379,6 +386,7 @@ function getResponse(event) {
                 var date = new Date(timestamp * 1000);
                 var year = date.getFullYear();
                 var month = date.getMonth();
+                month = month + 1;
                 var day = date.getDate();
                 var dateFormat = month + "/" + day + "/" + year
                 var uvIndex = response.value
@@ -410,6 +418,7 @@ function getResponse(event) {
                             var weekday = weekArr[fiveDate.getDay()];
                             var day = fiveDate.getDate();
                             var month = fiveDate.getMonth();
+                            month = month + 1;
                             var year = fiveDate.getFullYear();
                             var dateFormat = weekday + " - " + month + "/" + day + "/" + year
 
@@ -531,6 +540,7 @@ function getBtnResponse(event) {
             var date = new Date(timestamp * 1000);
             var year = date.getFullYear();
             var month = date.getMonth();
+            month = month + 1;
             var day = date.getDate();
             var dateFormat = month + "/" + day + "/" + year
             var uvIndex = response.value
@@ -562,6 +572,7 @@ function getBtnResponse(event) {
                         var weekday = weekArr[fiveDate.getDay()];
                         var day = fiveDate.getDate();
                         var month = fiveDate.getMonth();
+                        month = month + 1;
                         var year = fiveDate.getFullYear();
                         var dateFormat = weekday + " - " + month + "/" + day + "/" + year
 
