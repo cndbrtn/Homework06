@@ -441,6 +441,7 @@ function getResponse(event) {
 
 function getBtnResponse(event) {
     event.preventDefault();
+    event.stopPropagation();
     searchStorage();
     console.log("click number: ", searchClick)
     var userSearch = $(this).attr("data-city");
@@ -466,7 +467,7 @@ function getBtnResponse(event) {
         currentForcast.html("<span><h1>Today's Forcast</h1></span")
         btnHolder.html("<span><h1>Past Searches</h1></span")
 
-
+        // I'm not sure how to fix the buttons so that they don't do weird overwriting things but I just don't have time right now
         for (var i = 0; i < userSearches.length; i++) {
             var buttonEl = $("<button data-city='" + userSearches + "' class='past-btn'>");
             buttonEl.text(userSearches[i]);
@@ -594,13 +595,16 @@ function searchStorage() {
 
     console.log("storage slot array ", storageSlot)
     if (storageSlot[0] === null) {
-        console.log("storageSlot = null ", storageSlot)
         return;
     }
     else {
-        for (var i = 0; i < storageSlot.length; i++) {
+        var filtered = storageSlot.filter(function (el) {
+            return el != null;
+        });
+        console.log("filtered", filtered)
+        for (var i = 0; i < filtered.length; i++) {
             var buttonEl = $("<button data-city='" + storageSlot[i] + "' value='submit'>");
-            buttonEl.text(storageSlot[i].split(',')[0]);
+            buttonEl.text(filtered[i].split(',')[0]);
             // buttonEl.attr("data-city", + storageSlot[i])
             buttonEl.attr("style", "margin: 10px;");
             buttonEl.attr("class", "past-btn");
